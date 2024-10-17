@@ -17,6 +17,7 @@ SOURCES += \
     Token/Operation/power.cpp \
     Token/factories.cpp \
     Token/itoken.cpp \
+    Token/number.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -29,6 +30,7 @@ HEADERS += \
     Token/Operation/power.h \
     Token/factories.h \
     Token/itoken.h \
+    Token/number.h \
     mainwindow.h
 
 # Default rules for deployment.
