@@ -9,10 +9,26 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Token/Operation/divide.cpp \
+    Token/Operation/minus.cpp \
+    Token/Operation/multiply.cpp \
+    Token/Operation/operation.cpp \
+    Token/Operation/plus.cpp \
+    Token/Operation/power.cpp \
+    Token/factories.cpp \
+    Token/itoken.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Token/Operation/divide.h \
+    Token/Operation/minus.h \
+    Token/Operation/multiply.h \
+    Token/Operation/operation.h \
+    Token/Operation/plus.h \
+    Token/Operation/power.h \
+    Token/factories.h \
+    Token/itoken.h \
     mainwindow.h
 
 # Default rules for deployment.
