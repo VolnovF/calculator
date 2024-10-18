@@ -15,6 +15,19 @@ Operation *Factory::makeOperation(char ch)
         return new Power();
     default:
         return nullptr;
-        break;
+    }
+}
+
+IToken *Factory::makeOneLetterToken(char ch)
+{
+    switch (IToken::typeOfChar(ch)) {
+    case IToken::operation:
+        return makeOperation(ch);
+    case IToken::openParenthesis:
+        return new OpenParenthesis();
+    case IToken::closeParenthesis:
+        return new CloseParenthesis();
+    default:
+        return nullptr;
     }
 }

@@ -4,8 +4,6 @@
 #include <cctype>
 #include <map>
 
-class Operation;
-
 class IToken
 {
 protected:
@@ -29,6 +27,10 @@ public:
     virtual ~IToken() {}
 public:
     static Type typeOfChar(char ch);
+    static bool isNumber(char ch);
+    static bool isOpenParenthesis(char ch);
+    static bool isCloseParenthesis(char ch);
+    static bool isOperation(char ch);
 };
 
 #endif // ITOKEN_H

@@ -20,6 +20,7 @@ SOURCES += \
     Token/itoken.cpp \
     Token/number.cpp \
     Token/openparenthesis.cpp \
+    calculator.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -35,7 +36,11 @@ HEADERS += \
     Token/itoken.h \
     Token/number.h \
     Token/openparenthesis.h \
+    calculator.h \
     mainwindow.h
+
+FORMS += \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
