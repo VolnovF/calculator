@@ -19,17 +19,18 @@ void MainWindow::on_pushButton_Calculate_clicked()
 {
     QString str{ ui->lineEdit_Expression->text() };
     str = str.simplified();
-    Calculator calculator(str.toStdString());
-
-    QString result{ calculator.getResult() };
-    ui->lineEdit_Expression->setText(result);;
+    Calculator calc(str.toStdString());
+    if(calc.getStatus())
+    {
+        return ui->lineEdit_Expression->setText("Err");
+    }
+    ui->lineEdit_Expression->setText( QString::number(calc.getResult()) );
     ui->listWidget_History->addItem(str);
 }
 
 void MainWindow::addInExpression(QString text)
 {
-    QString newText{ ui->lineEdit_Expression->text().append(text) };
-    ui->lineEdit_Expression->setText( newText );
+    ui->lineEdit_Expression->setText( ui->lineEdit_Expression->text().append(text));
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

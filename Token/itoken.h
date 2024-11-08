@@ -11,6 +11,7 @@ protected:
 public:
     enum Type{
         number,
+        negative,
         operation,
         openParenthesis,
         closeParenthesis,
@@ -30,6 +31,7 @@ public:
     static bool isNumber(char ch);
     static bool isOpenParenthesis(char ch);
     static bool isCloseParenthesis(char ch);
+    static bool isNegative(char ch);
     static bool isOperation(char ch);
 };
 

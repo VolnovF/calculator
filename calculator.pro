@@ -9,6 +9,9 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    FSM/executerpn.cpp \
+    FSM/infixtorpn.cpp \
+    FSM/tokenizer.cpp \
     Token/Operation/divide.cpp \
     Token/Operation/minus.cpp \
     Token/Operation/multiply.cpp \
@@ -25,6 +28,9 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    FSM/executerpn.h \
+    FSM/infixtorpn.h \
+    FSM/tokenizer.h \
     Token/Operation/divide.h \
     Token/Operation/minus.h \
     Token/Operation/multiply.h \

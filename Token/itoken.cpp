@@ -20,10 +20,10 @@ IToken::Type IToken::typeOfChar(char ch)
     if(std::isdigit(ch))
         return number;
 
-    static std::map<char, Type> typesMap{
+    static const std::map<char, Type> typesMap{
         {'.', number},
         {'+', operation},
-        {'-', operation},
+        {'-', negative},
         {'*', operation},
         {'/', operation},
         {'^', operation},
@@ -46,6 +46,11 @@ bool IToken::isOpenParenthesis(char ch)
 bool IToken::isCloseParenthesis(char ch)
 {
     return typeOfChar(ch) == closeParenthesis;
+}
+
+bool IToken::isNegative(char ch)
+{
+    return typeOfChar(ch) == negative;
 }
 
 bool IToken::isOperation(char ch)

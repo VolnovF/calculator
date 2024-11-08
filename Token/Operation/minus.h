@@ -10,6 +10,7 @@ public:
 
     int getPriority() const override;
     double execute(double leftOperand, double rightOperand) const override;
+
 };
 
 #endif // MINUS_H
